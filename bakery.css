@@ -1,0 +1,141 @@
+/* Bakery & Confectionery page: warm, playful, same site */
+.bakery{
+  --red:#d9681a;          /* warm toasted orange replaces the Eats red */
+  --brown:#4a2a12;
+  --black:#4a2a12;        /* buttons and round icons turn chocolate brown */
+  --soft:#fff3dd;
+  --line:#f1dfc3;
+  --wheat:#f2b53a;
+  background:#fffaf1;
+}
+.bakery h1,.bakery .title,.bakery .cat h3,.bakery .drawer-head h3,.bakery .site-footer h4,.bakery .c-card h3,.bakery .price,.bakery .total strong{font-family:'Fredoka','Montserrat',sans-serif;font-weight:600;letter-spacing:.01em}
+.bakery .announce{background:var(--brown);color:#ffe9c2}
+.bakery .logo img{height:46px}
+.bakery .site-header{border-bottom:3px dotted var(--wheat)}
+.bakery .nav a.nav-switch{background:var(--brown);color:#fff;padding:7px 14px;border-radius:999px}
+.bakery .nav a.nav-switch:hover{background:var(--red);color:#fff}
+
+/* playful buttons */
+.bakery .btn{border-radius:999px;border-width:3px;transition:transform .2s,background .2s,box-shadow .2s}
+.bakery .btn:hover{transform:translateY(-3px) rotate(-1deg);box-shadow:0 8px 0 rgba(74,42,18,.15)}
+.btn-brown{background:var(--brown);border-color:var(--brown);color:#fff}
+.btn-brown:hover{background:#2f1a09;border-color:#2f1a09}
+.bakery .btn-red{background:var(--red);border-color:var(--red)}
+.bakery .add{border-radius:999px;transition:transform .15s}
+.bakery .add:hover{background:var(--red);transform:scale(1.08) rotate(-2deg)}
+.bakery .chip{border-radius:999px;border-width:2px;font-family:'Fredoka',sans-serif;font-size:.9rem;letter-spacing:.02em;text-transform:none}
+.bakery .chip.on{background:var(--red);border-color:var(--red)}
+
+/* hero */
+.b-hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;max-width:1150px;margin:0 auto;padding:54px 22px 40px}
+.b-hero .eyebrow{color:var(--red)}
+.b-hero h1{font-size:clamp(2.8rem,8vw,5.4rem);line-height:1;color:var(--brown)}
+.b-hero h1 span{color:var(--red);display:inline-block;animation:wiggle 3s ease-in-out infinite}
+.b-hero .lead{color:#6b4a30;margin:18px 0 26px;max-width:470px}
+.b-hero-pics{position:relative;height:440px}
+.b-hero-pics img{position:absolute;border:8px solid #fff;border-radius:10px;box-shadow:0 14px 30px rgba(74,42,18,.25);object-fit:cover;cursor:zoom-in;transition:transform .3s}
+.b-hero-pics .p1{width:62%;height:300px;left:0;top:10px;transform:rotate(-5deg)}
+.b-hero-pics .p2{width:50%;height:230px;right:0;top:0;transform:rotate(6deg)}
+.b-hero-pics .p3{width:54%;height:230px;right:6%;bottom:0;transform:rotate(-3deg)}
+.b-hero-pics img:hover{transform:rotate(0) scale(1.05);z-index:3}
+.sticker{position:absolute;left:4%;bottom:6%;width:118px;height:118px;border-radius:50%;background:var(--wheat);color:var(--brown);display:grid;place-items:center;text-align:center;font-family:'Fredoka',sans-serif;font-weight:700;font-size:1.05rem;line-height:1.1;transform:rotate(-12deg);box-shadow:0 8px 0 rgba(74,42,18,.18);border:4px dashed #fff;animation:bob 2.6s ease-in-out infinite;z-index:4}
+@keyframes wiggle{0%,100%{transform:rotate(-2deg)}50%{transform:rotate(2deg) translateY(-3px)}}
+@keyframes bob{0%,100%{transform:rotate(-12deg) translateY(0)}50%{transform:rotate(-8deg) translateY(-8px)}}
+
+/* marquee */
+.marquee{background:var(--brown);color:#ffe9c2;overflow:hidden;white-space:nowrap;border-top:4px solid var(--wheat);border-bottom:4px solid var(--wheat);transform:rotate(-.8deg);margin:10px -10px 20px}
+.marquee-track{display:inline-flex;animation:scroll 28s linear infinite;padding:11px 0}
+.marquee span{font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.05rem;padding:0 22px;position:relative}
+.marquee span::after{content:"\2726";position:absolute;right:-6px;color:var(--wheat)}
+@keyframes scroll{to{transform:translateX(-50%)}}
+
+/* sections */
+.bakery .section.band{background:var(--soft);position:relative}
+.bakery .section.band::before{content:"";position:absolute;left:0;right:0;top:-1px;height:14px;background:radial-gradient(circle at 10px 0,#fffaf1 10px,transparent 11px) 0 0/28px 14px repeat-x}
+.bakery .title{color:var(--brown)}
+.bakery .sub{color:#7a5a40}
+.bakery .cat h3{border-bottom:4px solid var(--wheat);color:var(--brown)}
+.bakery .item{background:#fff;border:2px solid var(--line);border-radius:20px;transition:transform .2s,box-shadow .2s}
+.bakery .item:hover{transform:translateY(-3px) rotate(-.4deg);box-shadow:0 8px 0 rgba(242,181,58,.35)}
+.item .ico{font-size:1.9rem;line-height:1;width:44px;height:44px;border-radius:50%;background:var(--soft);display:grid;place-items:center;flex:0 0 auto}
+.bakery .price{color:var(--red)}
+
+/* buckets */
+.buckets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:6px}
+.bucket{background:#fff;border:3px solid var(--brown);border-radius:26px;padding:22px 18px;position:relative;box-shadow:0 8px 0 var(--wheat);transition:transform .25s}
+.bucket:nth-child(odd){transform:rotate(-1deg)}
+.bucket:nth-child(even){transform:rotate(1deg)}
+.bucket:hover{transform:rotate(0) translateY(-4px)}
+.b-ico{font-size:2.4rem;line-height:1}
+.bucket h3{font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.6rem;color:var(--brown);margin:4px 0 12px}
+.size{display:flex;align-items:center;gap:10px;padding:9px 0;border-top:2px dotted var(--line)}
+.size b{flex:1;font-size:.92rem}
+.bucket-ask{max-width:760px;margin:26px auto 0;background:#fff;border:3px dashed var(--wheat);border-radius:24px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.bucket-ask p{font-size:.92rem;color:#5a3d26;flex:1;min-width:220px}
+
+/* our day */
+.day{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:20px;counter-reset:d}
+.day-card{background:#fff;border:2px solid var(--line);border-radius:24px;padding:26px 20px;text-align:center;position:relative;transition:transform .25s}
+.day-card:hover{transform:translateY(-6px) rotate(-1deg)}
+.day-ico{font-size:2.6rem;display:block;animation:bob2 3s ease-in-out infinite}
+.day-card:nth-child(2) .day-ico{animation-delay:.4s}
+.day-card:nth-child(3) .day-ico{animation-delay:.8s}
+@keyframes bob2{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+.day-card h3{font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.35rem;color:var(--brown);margin:6px 0 4px}
+.day-card p{font-size:.9rem;color:#6b4a30}
+.day-card a{display:inline-block;margin-top:10px;color:var(--red);font-weight:700;font-size:.85rem}
+
+/* gallery polaroids */
+.polaroids{grid-template-columns:repeat(4,1fr);gap:16px}
+.polaroids img{border:8px solid #fff;border-bottom-width:26px;border-radius:6px;box-shadow:0 10px 20px rgba(74,42,18,.2);aspect-ratio:3/4}
+.polaroids img:nth-child(odd){transform:rotate(-3deg)}
+.polaroids img:nth-child(even){transform:rotate(3deg)}
+.polaroids img:hover{transform:rotate(0) scale(1.05)}
+
+/* videos */
+.videos{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;max-width:900px;margin:0 auto}
+.videos video{width:100%;border-radius:24px;border:6px solid #fff;box-shadow:0 12px 26px rgba(74,42,18,.25);background:#000;aspect-ratio:4/3;object-fit:cover}
+
+.bakery .board img{border-radius:20px;border:6px solid #fff;box-shadow:0 12px 26px rgba(74,42,18,.2)}
+.bakery .story{color:#5a3d26}
+.bakery .story em{color:var(--red)}
+.bakery .story .btn{margin-top:6px}
+.bakery .faq details{border-radius:18px;border:2px solid var(--line)}
+.bakery .faq summary{font-family:'Fredoka',sans-serif;font-weight:600;font-size:1.05rem;color:var(--brown)}
+.bakery .faq summary::after{color:var(--red)}
+.bakery .faq p{color:#5a3d26}
+.bakery .c-card{border-radius:22px;background:#fff;border:2px solid var(--line)}
+.bakery .c-card .link{color:var(--red)}
+
+/* footer */
+.bakery .site-footer{background:var(--brown);border-top:6px solid var(--wheat)}
+.bakery .foot-brand img{height:64px}
+.bakery .site-footer .foot-top a:not(.btn):hover{color:var(--wheat)}
+.bakery .site-footer .foot-top .socials a:hover{background:var(--red);border-color:var(--red)}
+.bakery .copy{border-top-color:#6a4528;color:#c9ae8f}
+
+.bakery .drawer-head h3{color:var(--brown)}
+.bakery .total strong{color:var(--red)}
+.bakery .radios label{border-radius:14px}
+.bakery .field input[type=text],.bakery .field textarea{border-radius:14px}
+.bakery .toast{background:var(--brown);border-radius:999px}
+.cart-btn.pop{animation:pop .4s}
+@keyframes pop{40%{transform:scale(1.25) rotate(-8deg)}}
+
+@media(max-width:960px){
+  .buckets{grid-template-columns:1fr 1fr}
+  .polaroids{grid-template-columns:repeat(2,1fr)}
+  .bakery .nav a.nav-switch{border-radius:0;background:var(--soft);color:var(--brown)}
+}
+@media(max-width:720px){
+  .b-hero{grid-template-columns:1fr;padding:30px 18px 24px}
+  .b-hero-pics{height:380px;order:-1;margin-bottom:10px}
+  .b-hero-pics .p1{height:240px}
+  .b-hero-pics .p2,.b-hero-pics .p3{height:190px}
+  .buckets,.day,.videos{grid-template-columns:1fr}
+  .bucket:nth-child(odd),.bucket:nth-child(even){transform:none}
+  .bakery .cat-grid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  .b-hero h1 span,.sticker,.day-ico,.marquee-track{animation:none}
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bakery &amp; Confectionery | The Exclusives 017, Kwa-Thema, Springs</title>
+<meta name="description" content="Fresh bread, scones, sponge cakes, jam tarts and oat biscuits baked every morning in Kwa-Thema, Springs. Buckets for functions and ceremonies. Order on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fredoka:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="bakery.css">
+</head>
+<body class="bakery">
+
+<div class="announce" id="announce">Fresh from the oven every morning</div>
+
+<header class="site-header">
+  <a class="logo" href="#top" aria-label="The Exclusives 017 Bakery and Confectionery home"><img src="images/bakery-logo.png" alt="The Exclusives 017 Bakery &amp; Confectionery"></a>
+  <nav class="nav" id="nav">
+    <a href="#menu">Menu</a>
+    <a href="#buckets">Buckets</a>
+    <a href="#day">Our Day</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a class="nav-switch" href="index.html">Eats &amp; Kotas &rarr;</a>
+  </nav>
+  <div class="tools">
+    <button class="cart-btn" id="cartBtn" aria-label="Open your order">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 6h15l-1.5 9h-12z"/><path d="M6 6L5 3H2"/><circle cx="9" cy="20" r="1.5"/><circle cx="18" cy="20" r="1.5"/></svg>
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+    <button class="round-btn" id="searchBtn" aria-label="Search the menu">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+    </button>
+    <button class="round-btn burger" id="menuToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="search-panel" id="searchPanel" hidden>
+  <input id="searchInput" type="search" placeholder="Search the bakery, e.g. scones, bread, bucket" autocomplete="off">
+</div>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="b-hero">
+  <div class="b-hero-text">
+    <p class="eyebrow">Bakery &amp; Confectionery &bull; Kwa-Thema, Springs</p>
+    <h1>FRESH<br>OUT THE <span>OVEN!</span></h1>
+    <p class="lead">Warm bread, golden scones, soft sponge cake and sweet jam tarts. Baked from the early hours, every morning.</p>
+    <div class="hero-btns">
+      <a class="btn btn-red" href="#menu">See the bakery menu</a>
+      <a class="btn btn-brown" href="#buckets">Buckets for functions</a>
+    </div>
+  </div>
+  <div class="b-hero-pics" aria-hidden="false">
+    <img class="p1 zoomable" src="images/bakery-tray.jpg" alt="Fresh loaves of bread on a tray" fetchpriority="high">
+    <img class="p2 zoomable" src="images/bakery-scones.jpg" alt="Golden baked scones">
+    <img class="p3 zoomable" src="images/bakery-sponge.jpg" alt="Sliced sponge cake">
+    <span class="sticker">Baked<br>every<br>morning!</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>White Bread</span><span>Brown Bread</span><span>Scones</span><span>Jam Tarts</span><span>Sponge Cake</span><span>Oat Biscuits</span><span>Mosbolletjies</span><span>Tea &amp; Coffee</span>
+    <span>White Bread</span><span>Brown Bread</span><span>Scones</span><span>Jam Tarts</span><span>Sponge Cake</span><span>Oat Biscuits</span><span>Mosbolletjies</span><span>Tea &amp; Coffee</span>
+  </div>
+</div>
+
+<!-- MENU -->
+<section class="section" id="menu">
+  <h2 class="title">THE <span>BAKERY MENU</span></h2>
+  <p class="sub">Tap <b>Add</b> on your favourites, then send your order to us on WhatsApp.</p>
+  <div class="chips" id="chips"></div>
+  <div id="menuList"></div>
+  <p class="no-results" id="noResults" hidden>Nothing found. Try another word.</p>
+</section>
+
+<!-- BUCKETS -->
+<section class="section band" id="buckets">
+  <h2 class="title">BUCKETS FOR <span>FUNCTIONS</span></h2>
+  <p class="sub">Ceremonies, family functions and church events: order a bucket and feed the crowd.</p>
+  <div class="buckets" id="bucketList"></div>
+  <div class="bucket-ask">
+    <p><b>Need packets of biscuits or treats for your occasion?</b><br>Tell us what you need and how many, and we will quote you.</p>
+    <a class="btn btn-red" id="bucketWa" href="#" target="_blank" rel="noopener">Ask for a quote on WhatsApp</a>
+  </div>
+</section>
+
+<!-- OUR DAY -->
+<section class="section" id="day">
+  <h2 class="title">OUR <span>DAY</span></h2>
+  <p class="sub">We start early, so you can too.</p>
+  <div class="day">
+    <div class="day-card"><span class="day-ico">&#127838;</span><h3>Early hours</h3><p>The ovens fire up. Bread, scones, sponge cakes and jam tarts come out first.</p></div>
+    <div class="day-card"><span class="day-ico">&#127836;</span><h3>From 11:00 am</h3><p>Kota orders open. Stacked, saucy and made to order.</p><a href="index.html#menu">See the kotas &rarr;</a></div>
+    <div class="day-card"><span class="day-ico">&#127831;</span><h3>Later on</h3><p>The Eats side takes over with chicken, wings, burgers and more.</p><a href="index.html#menu">See the Eats menu &rarr;</a></div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="section band" id="gallery">
+  <h2 class="title">SO <span>GOLDEN</span></h2>
+  <p class="sub">Tap a photo to enlarge it.</p>
+  <div class="gallery polaroids" id="galleryGrid">
+    <img src="images/bakery-tray.jpg" alt="A tray of fresh bread" loading="lazy">
+    <img src="images/bakery-scones.jpg" alt="Baked scones in a bowl" loading="lazy">
+    <img src="images/bakery-loaf.jpg" alt="A fresh loaf of bread" loading="lazy">
+    <img src="images/bakery-sponge.jpg" alt="Sliced sponge cake in a tub" loading="lazy">
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="section" id="videos">
+  <h2 class="title">WATCH IT <span>RISE</span></h2>
+  <p class="sub">Fresh loaves, straight from the tray.</p>
+  <div class="videos">
+    <video src="images/bread-1.mp4" poster="images/bread-1-poster.jpg" controls muted loop playsinline preload="none"></video>
+    <video src="images/bread-2.mp4" poster="images/bread-2-poster.jpg" controls muted loop playsinline preload="none"></video>
+  </div>
+</section>
+
+<!-- MENU BOARD -->
+<section class="section band" id="board">
+  <h2 class="title">THE PRINTED <span>MENU</span></h2>
+  <p class="sub">Tap to enlarge.</p>
+  <div class="board"><img src="images/bakery-menu.jpg" alt="The Exclusives 017 Bakery and Confectionery menu with prices" loading="lazy"></div>
+</section>
+
+<!-- STORY -->
+<section class="section" id="story">
+  <h2 class="title">TWO KITCHENS, <span>ONE FAMILY</span></h2>
+  <div class="story">
+    <p>The Exclusives 017 started in 2017 in Kwa-Thema, Springs. Today it has two divisions: <b>Bakery &amp; Confectionery</b>, which starts baking in the early hours of every morning, and <b>Eats</b>, where kota orders open from around 11:00 am and the kitchen serves chicken, wings and burgers.</p>
+    <p>Same family, same motto: <em>"What's art without creativity?"</em></p>
+    <a class="btn btn-brown" href="index.html">Visit the Eats side</a>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section band" id="faq">
+  <h2 class="title">QUESTIONS <span>&amp; ANSWERS</span></h2>
+  <div class="faq">
+    <details><summary>How do I order?</summary><p>Tap Add on the menu, open your order with the cart button, fill in your name and send it on WhatsApp. We reply to confirm. Your order can include bakery and Eats items together.</p></details>
+    <details><summary>Do you make buckets for functions?</summary><p>Yes. We do scones, sponge cakes and jam tarts in 5L, 10L and 20L buckets. Add one to your order, or message us with your date and number of guests.</p></details>
+    <details><summary>Can I get packets of biscuits for an occasion?</summary><p>Ask us on WhatsApp with the kind and amount you need, and we will quote you.</p></details>
+    <details><summary>Do you deliver?</summary><p>Yes, delivery is available. The fee depends on where you are and is confirmed on WhatsApp before you pay.</p></details>
+    <details><summary>When do you start baking?</summary><p>We start in the early hours every morning. Message us on WhatsApp to confirm what is fresh today.</p></details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section" id="contact">
+  <h2 class="title">FIND <span>US</span></h2>
+  <div class="contact">
+    <div class="c-card"><h3>Address</h3><p>1 Kgaswane Str.<br>Kwa-Thema, Springs</p>
+      <a class="link" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=1+Kgaswane+Street+Kwa-Thema+Springs">Open in Google Maps</a></div>
+    <div class="c-card"><h3>Hours</h3><p>Monday to Saturday<br><small>Baking starts in the early hours. Confirm today's times on WhatsApp.</small></p></div>
+    <div class="c-card"><h3>WhatsApp &amp; Call</h3><p><a id="phoneLink" href="#">082 967 4508</a></p>
+      <a class="link" id="contactWa" target="_blank" rel="noopener" href="#">Chat on WhatsApp</a></div>
+    <div class="c-card"><h3>Email</h3><p><a href="mailto:theexclusives017@gmail.com">theexclusives017@gmail.com</a></p></div>
+  </div>
+  <p class="follow"><a class="btn btn-fb" href="https://www.facebook.com/LifestyleLeBophelo" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.3-1.6 1.7-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.5H7.5v3.3h2.8V22h3.2z"/></svg> Facebook</a> <a class="btn btn-ig" href="https://www.instagram.com/theexclusives017" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg> Instagram</a></p>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="foot-top">
+    <div class="foot-brand">
+      <img src="images/bakery-logo-white.png" alt="The Exclusives 017 Bakery &amp; Confectionery">
+      <p>Fresh bread, scones, sponge cakes and jam tarts from Kwa-Thema, Springs. Baked every morning.</p>
+      <a class="btn btn-wa" id="footWa" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
+      <div class="socials">
+        <a href="https://www.facebook.com/LifestyleLeBophelo" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13.5 22v-8.2h2.8l.5-3.3h-3.3V8.4c0-.9.3-1.6 1.7-1.6h1.7V3.9c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.5H7.5v3.3h2.8V22h3.2z"/></svg></a>
+        <a href="https://www.instagram.com/theexclusives017" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a id="footWaIcon" href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2a9.9 9.9 0 0 0-8.46 15.04L2 22l5.1-1.55A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 14.96l-.3-.19-3 .91.93-2.93-.2-.31A8.1 8.1 0 0 1 12.04 3.8zm-3 3.9c-.2 0-.5.07-.76.35-.26.28-1 1-1 2.4s1.03 2.8 1.17 3c.15.2 2 3.2 4.95 4.35 2.45.97 2.95.78 3.48.73.53-.05 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34-.3-.15-1.7-.84-1.97-.94-.27-.1-.46-.15-.66.15-.2.3-.76.94-.93 1.13-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.37-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.57-.48-.5-.66-.5z"/></svg></a>
+        <a href="mailto:theexclusives017@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4>Quicklinks</h4>
+      <a href="#menu">Bakery Menu</a>
+      <a href="#buckets">Buckets</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#videos">Videos</a>
+    </div>
+    <div>
+      <h4>Policies</h4>
+      <a href="policies.html#refund">Refunds &amp; Complaints</a>
+      <a href="policies.html#delivery">Delivery</a>
+      <a href="policies.html#terms">Terms &amp; Conditions</a>
+      <a href="policies.html#privacy">Privacy</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#story">Our Story</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+      <a href="index.html">Eats &amp; Kotas</a>
+    </div>
+  </div>
+  <p class="copy">&copy; <span id="yr"></span> The Exclusives 017. All rights reserved.</p>
+</footer>
+
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff"><path d="M12.04 2a9.9 9.9 0 0 0-8.46 15.04L2 22l5.1-1.55A9.9 9.9 0 1 0 12.04 2zm0 1.8a8.1 8.1 0 1 1-4.3 14.96l-.3-.19-3 .91.93-2.93-.2-.31A8.1 8.1 0 0 1 12.04 3.8zm-3 3.9c-.2 0-.5.07-.76.35-.26.28-1 1-1 2.4s1.03 2.8 1.17 3c.15.2 2 3.2 4.95 4.35 2.45.97 2.95.78 3.48.73.53-.05 1.7-.7 1.94-1.37.24-.68.24-1.26.17-1.38-.07-.12-.27-.2-.56-.34-.3-.15-1.7-.84-1.97-.94-.27-.1-.46-.15-.66.15-.2.3-.76.94-.93 1.13-.17.2-.34.22-.63.07-.3-.15-1.25-.46-2.37-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.34.44-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.18-.24-.57-.48-.5-.66-.5z"/></svg>
+</a>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head"><h3>YOUR ORDER</h3><button id="closeCart" aria-label="Close">&times;</button></div>
+  <div class="drawer-body">
+    <div id="cartItems"></div>
+    <div class="empty" id="cartEmpty">Your order is empty. Add something tasty from the menu.</div>
+    <div id="checkout">
+      <div class="total"><span>Total</span><strong id="cartTotal">R0.00</strong></div>
+      <p class="tiny">Delivery fee (if any) is confirmed on WhatsApp before you pay.</p>
+      <div class="field">
+        <label>How would you like it?</label>
+        <div class="radios">
+          <label><input type="radio" name="mode" value="Collection" checked> Collection</label>
+          <label><input type="radio" name="mode" value="Delivery"> Delivery</label>
+        </div>
+      </div>
+      <div class="field"><label for="cName">Your name</label><input id="cName" type="text" placeholder="e.g. Thabo" autocomplete="name"></div>
+      <div class="field" id="addrField" hidden><label for="cAddr">Delivery address</label><input id="cAddr" type="text" placeholder="Street, area" autocomplete="street-address"></div>
+      <div class="field"><label for="cNote">Notes (date needed, extras)</label><textarea id="cNote" rows="2" placeholder="e.g. Needed for Saturday morning"></textarea></div>
+      <button class="btn btn-black full" id="sendBtn">Send order on WhatsApp</button>
+      <button class="clear" id="clearBtn">Clear order</button>
+    </div>
+  </div>
+</aside>
+
+<div class="lightbox" id="lightbox"><img id="lbImg" alt=""></div>
+<div class="toast" id="toast"></div>
+
+<script src="common.js"></script>
+<script src="bakery.js"></script>
+</body>
+</html>
