@@ -4,8 +4,8 @@
    page (bakery.html). The cart is shared between them.
    ===================================================== */
 
-const WHATSAPP = "27829674508";        // 082 967 4508 in international format (no +, no spaces)
-const PHONE_SHOW = "082 967 4508";
+const WHATSAPP = "27829764508";        // 082 976 4508 in international format (no +, no spaces)
+const PHONE_SHOW = "082 976 4508";
 
 const $ = (s) => document.querySelector(s);
 const cents = (r) => Math.round(r * 100);
