@@ -27,12 +27,17 @@ const MENU = [
     ]},
   { cat: "Chips", items: [ { n: "Russian and Chips", p: 40 } ]},
   { cat: "Burgers", items: [
-      { n: "Single Cheese Burger", p: 34.99 },
-      { n: "Single Cheese Burger + Ama Fries", p: 44.99 },
-      { n: "Double Cheese Burger", p: 54.99 },
-      { n: "Double Cheese Burger + Ama Fries", p: 64.99 },
-      { n: "Double Bacon Cheese", p: 69.99 },
-      { n: "Double Bacon Cheese Burger + Ama Fries", p: 79.99 }
+      { n: "Single Cheese Burger + Ama Fries", p: 60 },
+      { n: "Double Cheese Burger + Ama Fries", p: 85 },
+      { n: "Double Bacon Cheese Burger + Ama Fries", p: 100 }
+  ]},
+  { cat: "Chicken", items: [
+      { n: "Quarter Chicken + Ama Fries", p: 60 },
+      { n: "Quarter Chicken + Pap + 2 Sides", p: 65 },
+      { n: "Half Chicken + Ama Fries", p: 80 },
+      { n: "Half Chicken + Pap + 2 Sides", p: 90 },
+      { n: "Full Chicken + Ama Fries", p: 160 },
+      { n: "Full Chicken + Pap + 2 Sides", p: 185 }
   ]},
   { cat: "Wraps", items: [
       { n: "Chicken Wrap", p: 34.99 },
@@ -41,13 +46,6 @@ const MENU = [
       { n: "Beef Wrap + Ama Fries", p: 44.99 }
   ]},
   { cat: "Mains", items: [
-      { n: "Quarter Chicken + Pap + 2 Sides", p: 49.99 },
-      { n: "Quarter Chicken + Ama Fries", p: 49.99 },
-      { n: "Half Chicken", p: 64.99 },
-      { n: "Full Chicken", p: 94.99 },
-      { n: "Half Chicken + Pap + 2 Sides", p: 74.99 },
-      { n: "Full Chicken + Pap + 2 Sides", p: 119.99 },
-      { n: "Full Chicken + Ama Fries", p: 119.99 },
       { n: "Steak + Pap + 2 Sides", p: 54.99 },
       { n: "Steak & Ama Medium Fries", p: 54.99 },
       { n: "Steak & Wors + Ama Medium Fries", p: 64.99 },
@@ -68,10 +66,10 @@ const SPECIAL = [
 ];
 
 const PLATTERS = [
-  { n: "Feast for 2", p: 194.99, inc: ["10 wings", "300g steak", "300g wors"] },
-  { n: "Feast for 4", p: 299.99, inc: ["16 wings", "Half chicken", "600g steak", "600g wors"] },
-  { n: "Feast for 6", p: 449.99, inc: ["24 wings", "Full chicken", "800g steak", "600g wors"] },
-  { n: "Feast for 8", p: 649.99, inc: ["32 wings", "2 full chickens", "1kg steak", "1kg wors"] }
+  { n: "Feast for 2", p: 230, inc: ["10 wings", "300g steak", "300g wors"] },
+  { n: "Feast for 4", p: 340, inc: ["16 wings", "Half chicken", "600g steak", "600g wors"] },
+  { n: "Feast for 6", p: 550, inc: ["24 wings", "Full chicken", "800g steak", "600g wors"] },
+  { n: "Feast for 8", p: 850, inc: ["32 wings", "2 full chickens", "1kg steak", "1kg wors"] }
 ];
 
 /* ===================== CODE BELOW (no need to edit) ===================== */
