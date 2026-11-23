@@ -45,14 +45,6 @@ const MENU = [
       { n: "Beef Wrap", p: 34.99 },
       { n: "Beef Wrap + Ama Fries", p: 44.99 }
   ]},
-  { cat: "Mains", items: [
-      { n: "Steak + Pap + 2 Sides", p: 54.99 },
-      { n: "Steak & Ama Medium Fries", p: 54.99 },
-      { n: "Steak & Wors + Ama Medium Fries", p: 64.99 },
-      { n: "Steak & Wors + Pap + 2 Sides", p: 64.99 },
-      { n: "Wors + Pap + 2 Sides", p: 39.99 },
-      { n: "Beef Stew + Pap/Rice + 2 Sides", p: 49.99 }
-  ]},
   { cat: "Drinks", items: [
       { n: "500ml Flavoured Mocktail", p: 35 },
       { n: "500ml Flavoured Cocktail", p: 45 }
