@@ -84,6 +84,7 @@ $("#sendBtn").onclick = () => {
   msg += "Name: " + name + "\nType: " + mode + "\n";
   if (mode === "Delivery") msg += "Address: " + addr + "\n";
   if (note) msg += "Notes: " + note + "\n";
+  msg += "\nPlease confirm my order and send the QR code so I can pay online.";
   window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(msg), "_blank");
 };
 
@@ -167,3 +168,27 @@ function createMenu(opts) {
 }
 
 renderCart();
+
+/* Images that fail on a weak signal retry by themselves */
+(function () {
+  function retry(img) {
+    const n = +(img.dataset.retry || 0);
+    if (n >= 4) return;
+    img.dataset.retry = n + 1;
+    if (!img.dataset.src0) img.dataset.src0 = img.getAttribute("src");
+    setTimeout(() => {
+      const base = img.dataset.src0.split("?")[0];
+      img.src = base + "?r=" + Date.now();
+    }, 1500 * (n + 1));
+  }
+  document.addEventListener("error", (e) => {
+    if (e.target && e.target.tagName === "IMG") retry(e.target);
+  }, true);
+  function fixAll() {
+    document.querySelectorAll("img").forEach((img) => {
+      if (img.complete && img.naturalWidth === 0 && img.getAttribute("src")) { img.dataset.retry = 0; retry(img); }
+    });
+  }
+  window.addEventListener("online", fixAll);
+  window.addEventListener("load", () => setTimeout(fixAll, 2500));
+})();
