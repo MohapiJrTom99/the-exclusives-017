@@ -45,7 +45,7 @@ const MENU = [
       { n: "Beef Wrap", p: 34.99 },
       { n: "Beef Wrap + Ama Fries", p: 44.99 }
   ]},
-  { cat: "Drinks", items: [
+  { cat: "Drinks", img: "images/drinks.jpg", items: [
       { n: "500ml Flavoured Mocktail", p: 35 },
       { n: "500ml Flavoured Cocktail", p: 45 }
   ]}
